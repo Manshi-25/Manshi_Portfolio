@@ -3,13 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manshi Chauhan — AI/ML Engineer & Full-Stack Developer</title>
+    <meta name="description" content="Portfolio of Manshi Chauhan — AI/ML engineer and full-stack developer. Research, projects and writing." />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://manshi-chauhan.vercel.app/" />
+    <meta property="og:title" content="Manshi Chauhan — AI/ML Engineer & Full-Stack Developer" />
+    <meta property="og:description" content="Portfolio of Manshi Chauhan — AI/ML engineer and full-stack developer. Research, projects and writing." />
+    <meta property="og:image" content="https://manshi-chauhan.vercel.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Manshi Chauhan" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Manshi Chauhan — AI/ML Engineer & Full-Stack Developer" />
+    <meta name="twitter:description" content="Portfolio of Manshi Chauhan — AI/ML engineer and full-stack developer. Research, projects and writing." />
+    <meta name="twitter:image" content="https://manshi-chauhan.vercel.app/og-image.png" />
+
+    <!-- Theme & canonical -->
+    <meta name="theme-color" content="#c76c42" />
+    <link rel="canonical" href="https://manshi-chauhan.vercel.app/" />
+
     <script>
       (function () {
         try {
           var t = localStorage.getItem("theme");
-          if (!t) {
-            t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-          }
+          if (!t) { t = "dark"; }
           if (t === "dark") document.documentElement.classList.add("dark");
         } catch (e) {}
       })();
