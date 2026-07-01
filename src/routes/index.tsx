@@ -66,7 +66,7 @@ function Landing() {
           transition={{ delay: 0.4, duration: 0.7 }}
           className="text-xs md:text-sm uppercase tracking-[0.4em] text-clay mb-8"
         >
-          — Portfolio · 2026
+          
         </motion.p>
 
         <h1 className="font-serif leading-[0.95] tracking-tight text-balance">
@@ -95,7 +95,7 @@ function Landing() {
           className="mt-8 max-w-md text-base md:text-lg text-muted-foreground"
         >
           AI/ML engineer & full-stack developer.<br className="hidden sm:block" />
-          Building thoughtful software at the edges of research and craft.
+         
         </motion.p>
 
         <motion.div
