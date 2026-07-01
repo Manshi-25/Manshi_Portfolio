@@ -21,7 +21,7 @@ import { AmbientBackground } from "../components/floating-lines-background";
 import { PageTransition } from "../components/page-transition";
 import { SkipLink } from "../components/skip-link";
 
-const SITE_URL = "https://manshichauhan.dev";
+const SITE_URL = "https://manshi-chauhan.vercel.app";
 const OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 function NotFoundComponent() {

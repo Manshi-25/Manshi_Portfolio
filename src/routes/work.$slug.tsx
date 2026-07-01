@@ -18,15 +18,15 @@ export const Route = createFileRoute("/work/$slug")({
           { property: "og:title", content: `${loaderData.title} — Manshi Chauhan` },
           { property: "og:description", content: loaderData.tagline },
           { property: "og:type", content: "article" },
-          { property: "og:url", content: `https://manshichauhan.dev/work/${loaderData.slug}` },
-          { property: "og:image", content: "https://manshichauhan.dev/og-image.png" },
+          { property: "og:url", content: `https://manshi-chauhan.vercel.app/work/${loaderData.slug}` },
+          { property: "og:image", content: "https://manshi-chauhan.vercel.app/og-image.png" },
           { name: "twitter:card", content: "summary_large_image" },
           { name: "twitter:title", content: `${loaderData.title} — Manshi Chauhan` },
           { name: "twitter:description", content: loaderData.tagline },
-          { name: "twitter:image", content: "https://manshichauhan.dev/og-image.png" },
+          { name: "twitter:image", content: "https://manshi-chauhan.vercel.app/og-image.png" },
         ]
       : [],
-    links: loaderData ? [{ rel: "canonical", href: `https://manshichauhan.dev/work/${loaderData.slug}` }] : [],
+    links: loaderData ? [{ rel: "canonical", href: `https://manshi-chauhan.vercel.app/work/${loaderData.slug}` }] : [],
   }),
   notFoundComponent: () => (
     <div className="mx-auto max-w-3xl px-6 py-32 text-center">
