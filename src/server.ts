@@ -1,4 +1,4 @@
-import "./lib/error-capture";
+/*import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
@@ -52,3 +52,15 @@ export default {
     }
   },
 };
+*/
+
+import "./lib/error-capture";
+
+import { consumeLastCapturedError } from "./lib/error-capture";
+import { renderErrorPage } from "./lib/error-page";
+
+// Vercel uses Node.js serverless functions, not Cloudflare Workers.
+// TanStack Start's server entry for Vercel exports a standard Node HTTP
+// handler, so we just re-export it directly without the Cloudflare-style
+// fetch(request, env, ctx) wrapper.
+export { default } from "@tanstack/react-start/server-entry";
