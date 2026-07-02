@@ -66,6 +66,8 @@ export const papers: Paper[] = [
     ],
     takeaway:
       "On noisy real-world clinical photos — not curated histopathology slides — pre-processing with metaheuristics mattered more than the classifier itself: smart image preparation closed most of the accuracy gap.",
+    link: "https://ieeexplore.ieee.org/document/11564907",
+    linkLabel: "View on IEEE Xplore",
   },
   {
     slug: "adversarial-ml-cybersecurity",
