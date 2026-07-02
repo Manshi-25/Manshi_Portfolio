@@ -1,25 +1,9 @@
+
+
 import { useEffect, useRef } from "react";
 
-/**
- * Canvas Cursor — fluid trailing-line effect, ported as-is from
- * cursify.vercel.app/components/canvas-cursor's spring-chain algorithm
- * (each line is a chain of nodes; the head node chases the pointer,
- * every following node chases the one ahead of it with spring +
- * damping physics). Physics parameters (spring, friction, trails,
- * size, dampening, tension) are kept identical to the original so the
- * motion feels exactly the same — the only change is recoloring the
- * rainbow hsla() hue-cycle to the site's clay/plum/mustard/sage theme
- * colors instead.
- * Disabled on touch devices and prefers-reduced-motion; pauses when the
- * tab is hidden.
- */
 type NodePoint = { x: number; y: number; vx: number; vy: number };
-
-type Line = {
-  spring: number;
-  friction: number;
-  nodes: NodePoint[];
-};
+type Line = { spring: number; friction: number; nodes: NodePoint[] };
 
 const CONFIG = {
   friction: 0.5,
@@ -29,9 +13,6 @@ const CONFIG = {
   tension: 0.98,
 };
 
-// Oscillator that drifts smoothly back and forth — used to pick a
-// position along the theme palette over time (replaces the original's
-// rainbow hue oscillator).
 class Oscillator {
   phase: number;
   offset: number;
@@ -55,6 +36,7 @@ export function CustomCursor() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
+    // Only on fine-pointer (mouse) devices — never on touch/mobile
     const fine = window.matchMedia("(pointer: fine)").matches;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (!fine || reduced) return;
@@ -100,9 +82,6 @@ export function CustomCursor() {
 
     const lines: Line[] = Array.from({ length: CONFIG.trails }, () => makeLine());
 
-    // Slow oscillator sweeps a position 0..1 across the theme palette,
-    // mirroring the original's hue oscillator but constrained to the
-    // site's own colors instead of the full rainbow.
     const colorWave = new Oscillator({
       phase: Math.random() * 2 * Math.PI,
       amplitude: 0.5,
@@ -115,7 +94,6 @@ export function CustomCursor() {
       const head = line.nodes[0];
       head.vx += (pos.x - head.x) * spring;
       head.vy += (pos.y - head.y) * spring;
-
       for (let i = 0; i < line.nodes.length; i++) {
         const node = line.nodes[i];
         if (i > 0) {
@@ -180,16 +158,7 @@ export function CustomCursor() {
       pos.y = e.clientY;
       hasMoved = true;
     }
-    function onTouchMove(e: TouchEvent) {
-      if (e.touches.length === 1) {
-        pos.x = e.touches[0].pageX;
-        pos.y = e.touches[0].pageY;
-        hasMoved = true;
-      }
-    }
     window.addEventListener("mousemove", onMove, { passive: true });
-    window.addEventListener("touchmove", onTouchMove, { passive: true });
-
     raf = requestAnimationFrame(render);
 
     function onVisibility() {
@@ -204,11 +173,13 @@ export function CustomCursor() {
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", resize);
       window.removeEventListener("mousemove", onMove);
-      window.removeEventListener("touchmove", onTouchMove);
       document.removeEventListener("visibilitychange", onVisibility);
     };
   }, []);
 
+  // On touch devices this canvas is never activated — returns a zero-size
+  // element that costs nothing. The pointer:fine check in useEffect above
+  // means the rAF loop never starts on mobile.
   return (
     <canvas
       ref={canvasRef}
@@ -229,9 +200,6 @@ function getThemePalette(): string[] {
   ];
 }
 
-// Picks a color along the palette using t in [0,1], blending between the
-// two nearest theme colors so the stroke drifts smoothly instead of
-// hard-cutting between hues.
 function sampleThemeColor(palette: string[], t: number): string {
   const clamped = Math.max(0, Math.min(1, t));
   const scaled = clamped * (palette.length - 1);

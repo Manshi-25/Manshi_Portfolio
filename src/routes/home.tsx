@@ -192,7 +192,7 @@ const featured = [
     tag: "Deep Learning",
     desc: "Four-model classifier for healthy vs. bleached corals, served via Flask.",
     stack: ["TF Lite", "Flask", "React"],
-    url: "https://coral-health-detection.vercel.app",
+    url: "https://reefvision.vercel.app",
     accent: "bg-sage/40",
   },
 ];

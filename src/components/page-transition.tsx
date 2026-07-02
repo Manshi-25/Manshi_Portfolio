@@ -1,21 +1,21 @@
+
+
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { ReactNode } from "react";
 
-/**
- * Smooth, lightweight route-change transition. Keyed by pathname so
- * AnimatePresence cross-fades the outgoing page out and the incoming
- * page in. Only opacity + a small transform are animated (cheap on
- * mobile GPUs), and it fully no-ops for prefers-reduced-motion users.
- */
 export function PageTransition({ pathname, children }: { pathname: string; children: ReactNode }) {
   const reduceMotion = useReducedMotion();
 
-  if (reduceMotion) {
+  // Disable on touch devices — Framer Motion layout animations are
+  // expensive on mobile and cause noticeable jank during navigation.
+  const isTouch = typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches;
+
+  if (reduceMotion || isTouch) {
     return <>{children}</>;
   }
 
   return (
-    <AnimatePresence mode="sync" initial={false}>
+    <AnimatePresence mode="wait" initial={false}>
       <motion.div
         key={pathname}
         initial={{ opacity: 0, y: 14 }}

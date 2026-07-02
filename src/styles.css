@@ -232,5 +232,3 @@ button:focus-visible,
   }
 }
 
-/* Floating-lines ambient background is drawn entirely on <canvas> in
-   floating-lines-background.tsx — no CSS keyframes needed here. */
