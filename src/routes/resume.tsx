@@ -42,7 +42,7 @@ type Item = {
 const timeline: Item[] = [
   {
     year: "2026",
-    title: "Research Paper - Metaheuristics Frameworkk for Oral Lesions",
+    title: "Research Paper on Metaheuristics Framework for Oral Lesions",
     org: "Research Presentation",
     detail: "Presented a research paper on a metaheuristics framework for oral lesions detection at the International Conference on Computational Intelligence and Data Science.",
     kind: "research",
@@ -50,7 +50,7 @@ const timeline: Item[] = [
   },
   {
     year: "2026",
-    title: "Book Chapter — Adversarial ML",
+    title: "Book Chapter on Adversarial ML",
     org: "Intelligent Computing in Cybersecurity",
     detail: "Co-authored a chapter on aligning adversarial defenses with cybersecurity frameworks.",
     kind: "research",
@@ -66,7 +66,7 @@ const timeline: Item[] = [
   },
   {
     year: "2025",
-    title: "Research Paper - Analytics Framework for UHI Mitigation",
+    title: "Research Paper on Analytics Framework for UHI Mitigation",
     org: "Research Publication",
     detail: "Published a research paper on an analytics framework for urban heat island mitigation in the International Journal of Environmental Science and Technology.",
     kind: "research",
@@ -76,7 +76,7 @@ const timeline: Item[] = [
     year: "2025",
     title: "Web Developer Intern",
     org: "Next Step Admission",
-    detail: "Built a full-stack AI-driven admission platform with Next.js, owned API integration and scalable UI.",
+    detail: "Built a full-stack admission platform with Next.js, owned API integration and scalable UI.",
     kind: "job",
     accent: "clay",
   },
@@ -89,7 +89,7 @@ const timeline: Item[] = [
     accent: "sage",
   },
   {
-    year: "2023 — 2027",
+    year: "2023 - 2027",
     title: "B.Tech, AI & ML",
     org: "Vivekananda Institute of Professional Studies",
     detail: "CGPA 9.1 · Core: ML, DL, Optimization, Systems.",
@@ -211,13 +211,6 @@ function Resume() {
   );
 }
 
-// Resume timeline as shadcn Tabs (category filter) + Accordion (expandable
-// rows), instead of a card grid/rail. Each row's HoverCard surfaces the
-// organisation + category as a small floating preview on hover/focus —
-// a different interaction model from the rest of the site's "always
-// visible" cards. Radix drives the open/close + tab-switch animations
-// (already wired up via tw-animate-css's accordion keyframes); Motion
-// only handles the per-row stagger-in.
 function ResumeTabs() {
   const [active, setActive] = useState("all");
 

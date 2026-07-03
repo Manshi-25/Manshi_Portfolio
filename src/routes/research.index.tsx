@@ -9,15 +9,15 @@ import { useSpotlight } from "@/hooks/use-spotlight";
 export const Route = createFileRoute("/research/")({
   head: () => ({
     meta: [
-      { title: "Research — Manshi Chauhan" },
+      { title: "Research Manshi Chauhan" },
       { name: "description", content: "Publications on optimization, generative AI, and adversarial ML." },
-      { property: "og:title", content: "Research — Manshi Chauhan" },
+      { property: "og:title", content: "Research Manshi Chauhan" },
       { property: "og:description", content: "Publications and book chapters." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `https://manshi-chauhan.vercel.app/research` },
       { property: "og:image", content: "https://manshi-chauhan.vercel.app/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Research — Manshi Chauhan" },
+      { name: "twitter:title", content: "Research Manshi Chauhan" },
       { name: "twitter:description", content: "Publications and book chapters." },
       { name: "twitter:image", content: "https://manshi-chauhan.vercel.app/og-image.png" },
     ],
@@ -44,14 +44,14 @@ function Research() {
     <div className="mx-auto max-w-4xl px-5 sm:px-6 md:px-10 py-14 sm:py-20 md:py-32">
       <Reveal>
         <p className="text-xs uppercase tracking-[0.2em] text-clay mb-5 sm:mb-6 inline-flex items-center gap-2">
-          <Sparkles className="size-3.5" aria-hidden="true" />— Research
+          <Sparkles className="size-3.5" aria-hidden="true" />  Research
         </p>
         <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl leading-[1.02] tracking-tight text-balance">
           On machines <span className="italic text-clay">that learn</span>.
         </h1>
         <p className="mt-5 sm:mt-6 text-sm sm:text-base text-muted-foreground max-w-lg">
           {papers.length} published works spanning adversarial security, generative AI and applied
-          deep learning — explore the abstract, methods and core takeaway from each.
+          deep learning explore the abstract, methods and core takeaway from each.
         </p>
       </Reveal>
 
@@ -157,7 +157,7 @@ function PaperCard({
             ))}
           </div>
 
-          {/* abstract preview — slides open on hover/focus instead of
+          {/* abstract preview slides open on hover/focus instead of
               cluttering the default card view, so the stack stays scannable
               but a taste of the writing is one interaction away */}
           <motion.div

@@ -6,15 +6,15 @@ import { Reveal } from "@/components/reveal";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Manshi Chauhan" },
+      { title: "About Manshi Chauhan" },
       { name: "description", content: "AI/ML undergrad, full-stack developer and researcher based in New Delhi." },
-      { property: "og:title", content: "About — Manshi Chauhan" },
+      { property: "og:title", content: "About Manshi Chauhan" },
       { property: "og:description", content: "Story, skills and education." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `https://manshi-chauhan.vercel.app/about` },
       { property: "og:image", content: "https://manshi-chauhan.vercel.app/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "About — Manshi Chauhan" },
+      { name: "twitter:title", content: "About Manshi Chauhan" },
       { name: "twitter:description", content: "Story, skills and education." },
       { name: "twitter:image", content: "https://manshi-chauhan.vercel.app/og-image.png" },
     ],
@@ -51,14 +51,14 @@ const skillGroups = [
 ];
 
 const education = [
-  { school: "Vivekananda Institute of Professional Studies", detail: "B.Tech — AI & ML · CGPA 9.1", years: "2023 — 2027" },
-  { school: "SKV No.1", detail: "Class XII · 86.2%", years: "2022 — 2023" },
-  { school: "GGSSS No.1", detail: "Class X · 94.4%", years: "2020 — 2021" },
+  { school: "Vivekananda Institute of Professional Studies", detail: "B.Tech AI & ML · CGPA 9.1", years: "2023 2027" },
+  { school: "SKV No.1", detail: "Class XII · 86.2%", years: "2022 2023" },
+  { school: "GGSSS No.1", detail: "Class X · 94.4%", years: "2020 2021" },
 ];
 
 const beyondCards = [
   {
-    title: "HR Conclave — Swadhyay Event",
+    title: "HR Conclave Swadhyay Event",
     role: "Volunteer · Organising team",
     body: "Helped organize and execute one of the college's flagship industry events. Sharpened my ability to communicate under pressure, work in teams, and take ownership when things don't go to plan.",
     icon: Users,
@@ -68,7 +68,7 @@ const beyondCards = [
   {
     title: "Kabaddi & Tug of War",
     role: "GGSIPU Dwarka Sports Meet",
-    body: "Represented my college in both events. Sports taught me grit, team coordination, and how to keep going when it gets physically — and mentally — hard.",
+    body: "Represented my college in both events. Sports taught me grit, team coordination, and how to keep going when it gets physically and mentally hard.",
     icon: Dumbbell,
     color: "from-sage/40 to-sage/0",
     accent: "text-sage",
@@ -76,7 +76,7 @@ const beyondCards = [
   {
     title: "Hackathons",
     role: "SIH · Cyber for Her · and more",
-    body: "Hackathons are where ideas meet deadlines — and I love the pressure. Each one made me faster, sharper, and more confident in turning an idea into a product.",
+    body: "Hackathons are where ideas meet deadlines and I love the pressure. Each one made me faster, sharper, and more confident in turning an idea into a product.",
     icon: Trophy,
     color: "from-plum/40 to-plum/0",
     accent: "text-plum",
@@ -90,7 +90,7 @@ function About() {
       <div className="blob bg-plum/25 size-60 sm:size-72 top-[40rem] -left-20 animate-float" />
       <div className="relative mx-auto max-w-4xl px-5 sm:px-6 md:px-10 py-14 sm:py-20 md:py-28">
         <Reveal>
-          <p className="text-xs uppercase tracking-[0.2em] text-clay mb-5 sm:mb-6">— About</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-clay mb-5 sm:mb-6">  About</p>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl leading-[1.02] tracking-tight text-balance">
             Builder by day, <span className="italic bg-gradient-to-r from-clay to-plum bg-clip-text text-transparent">researcher by night</span>.
           </h1>
@@ -98,17 +98,17 @@ function About() {
 
         <Reveal delay={0.2} className="mt-8 sm:mt-12 space-y-4 text-base sm:text-lg leading-relaxed text-muted-foreground">
           <p>
-            I'm <span className="text-foreground">Manshi Chauhan</span> — an AI &amp; ML enthusiast,
+            I'm <span className="text-foreground">Manshi Chauhan</span> an AI &amp; ML enthusiast,
             full-stack developer, and published researcher, currently in my final year of B.Tech.
           </p>
           <p>
             I turn ideas into <span className="text-foreground">intelligent systems</span> and complex
-            problems into clean solutions. I live at the intersection of curiosity and execution —
+            problems into clean solutions. I live at the intersection of curiosity and execution  
             I ask big questions, and then go build the answers.
           </p>
         </Reveal>
 
-        {/* Tech stack — horizontal slide-in cards with icon */}
+        {/* Tech stack horizontal slide-in cards with icon */}
         <Reveal delay={0.3} className="mt-16 sm:mt-20">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8">What I work with</h2>
           <div className="space-y-3">
@@ -141,7 +141,7 @@ function About() {
           </div>
         </Reveal>
 
-        {/* Education — staircase cards */}
+        {/* Education staircase cards */}
         <Reveal delay={0.3} className="mt-16 sm:mt-20">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8">Education</h2>
           <div className="grid gap-3 sm:gap-4">
@@ -170,7 +170,7 @@ function About() {
           </div>
         </Reveal>
 
-        {/* Beyond the screen — narrative cards with hover lift + accent rail */}
+        {/* Beyond the screen narrative cards with hover lift + accent rail */}
         <Reveal delay={0.3} className="mt-16 sm:mt-20">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8">Beyond the screen</h2>
           <div className="grid gap-4 sm:gap-5 md:grid-cols-3">
@@ -199,9 +199,7 @@ function About() {
               );
             })}
           </div>
-          <div className="mt-6 inline-flex items-center gap-2 text-xs sm:text-sm text-muted-foreground border border-mustard/40 bg-mustard/10 rounded-full px-4 py-2">
-            <Languages className="size-3.5 text-mustard" /> English · Hindi
-          </div>
+          
         </Reveal>
       </div>
     </div>

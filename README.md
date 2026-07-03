@@ -15,7 +15,7 @@ This portfolio showcases my research publications, engineering projects, and wri
 ## Contact
  
 - **Email:** manshi25chauhan@gmail.com
-- **LinkedIn:** [linkedin.com/in/manshi-chauhan](https://www.linkedin.com/in/manshi-chauhan)
+- **LinkedIn:** [linkedin.com/in/manshi-chauhan](https://www.linkedin.com/in/manshi-chauhan-860639315)
 - **GitHub:** [github.com/Manshi-25](https://github.com/Manshi-25)
 ---
  

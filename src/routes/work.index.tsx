@@ -30,7 +30,7 @@ function Work() {
   return (
     <div className="mx-auto max-w-5xl px-5 sm:px-6 md:px-10 py-14 sm:py-20 md:py-32">
       <Reveal>
-        <p className="text-xs uppercase tracking-[0.2em] text-clay mb-5 sm:mb-6">— Selected Work</p>
+        <p className="text-xs uppercase tracking-[0.2em] text-clay mb-5 sm:mb-6"> Selected Work</p>
         <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl leading-[1.02] tracking-tight text-balance">
           Things I've <span className="italic text-clay">built</span>.
         </h1>

@@ -98,7 +98,7 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
           </a>
           <div className="flex gap-4 text-xs text-muted-foreground">
             <a href="https://github.com/Manshi-25" target="_blank" rel="noreferrer" className="link-underline">GitHub ↗</a>
-            <a href="https://www.linkedin.com/in/manshi-chauhan" target="_blank" rel="noreferrer" className="link-underline">LinkedIn ↗</a>
+            <a href="https://www.linkedin.com/in/manshi-chauhan-860639315/" target="_blank" rel="noreferrer" className="link-underline">LinkedIn ↗</a>
           </div>
         </div>
       </div>
@@ -176,7 +176,7 @@ export function SiteFooter() {
         <div className="flex flex-col gap-2">
           <span className="text-xs uppercase tracking-widest text-clay mb-1">Elsewhere</span>
           <a href="https://github.com/Manshi-25" target="_blank" rel="noreferrer" className="link-underline w-fit">GitHub ↗</a>
-          <a href="https://www.linkedin.com/in/manshi-chauhan" target="_blank" rel="noreferrer" className="link-underline w-fit">LinkedIn ↗</a>
+          <a href="https://www.linkedin.com/in/manshi-chauhan-860639315/" target="_blank" rel="noreferrer" className="link-underline w-fit">LinkedIn ↗</a>
           <a href="mailto:manshi25chauhan@gmail.com" className="link-underline w-fit">Email ↗</a>
         </div>
         <div className="flex flex-col gap-2 md:items-end">

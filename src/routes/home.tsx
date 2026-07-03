@@ -6,15 +6,15 @@ import { Reveal, WordReveal } from "@/components/reveal";
 export const Route = createFileRoute("/home")({
   head: () => ({
     meta: [
-      { title: "Manshi Chauhan — AI/ML Engineer & Full-Stack Developer" },
+      { title: "Manshi Chauhan AI/ML Engineer & Full-Stack Developer" },
       { name: "description", content: "B.Tech AI/ML undergraduate. Full-stack apps, ML systems and published research." },
-      { property: "og:title", content: "Manshi Chauhan — Portfolio" },
+      { property: "og:title", content: "Manshi Chauhan Portfolio" },
       { property: "og:description", content: "Selected work, research and writing." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `https://manshi-chauhan.vercel.app/home` },
       { property: "og:image", content: "https://manshi-chauhan.vercel.app/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Manshi Chauhan — Portfolio" },
+      { name: "twitter:title", content: "Manshi Chauhan Portfolio" },
       { name: "twitter:description", content: "Selected work, research and writing." },
       { name: "twitter:image", content: "https://manshi-chauhan.vercel.app/og-image.png" },
     ],
@@ -46,7 +46,7 @@ function Index() {
           </Reveal>
 
           <h1 className="font-serif text-[clamp(2.25rem,9vw,7rem)] leading-[0.98] tracking-tight max-w-5xl text-balance">
-            <WordReveal text="Hi, I'm Manshi —" />
+            <WordReveal text="Hi, I'm Manshi  " />
             <br />
             <span className="italic bg-gradient-to-r from-clay via-plum to-mustard bg-clip-text text-transparent">
               <WordReveal text="I build, train" />
@@ -62,7 +62,7 @@ function Index() {
               <span className="text-foreground"> Full-Stack Development</span>.
             </p>
             <p className="mt-3">
-              I'm not just learning to code — I'm learning to solve problems the world actually has.
+              I'm not just learning to code I'm learning to solve problems the world actually has.
             </p>
           </Reveal>
 
@@ -113,7 +113,7 @@ function Index() {
         <Reveal>
           <div className="flex items-end justify-between mb-8 sm:mb-12">
             <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-clay mb-3">— Selected work</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-clay mb-3">  Selected work</p>
               <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl">Recent builds.</h2>
             </div>
             <Link to="/work" className="hidden md:inline-flex link-underline text-sm text-muted-foreground hover:text-foreground">
@@ -160,7 +160,7 @@ function Index() {
             <div className="absolute -top-20 -left-20 size-72 rounded-full bg-clay/40 blur-3xl" />
             <div className="absolute -bottom-20 -right-20 size-72 rounded-full bg-plum/40 blur-3xl" />
             <blockquote className="relative font-serif text-lg sm:text-2xl md:text-3xl leading-snug max-w-3xl text-balance">
-              "The small details — a button's kerning, a model's latency, a line no one reads —
+              "The small details a button's kerning, a model's latency, a line no one reads  
               they add up to the thing."
             </blockquote>
             <div className="relative mt-8 sm:mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-sm">
@@ -182,7 +182,7 @@ const featured = [
   {
     title: "Next Step Admission",
     tag: "Internship · 2025",
-    desc: "AI-driven admission platform — scalable UI, REST APIs, JWT auth.",
+    desc: "AI-driven admission platform scalable UI, REST APIs, JWT auth.",
     stack: ["React", "Node", "MongoDB"],
     url: "https://nextstepadmission.vercel.app",
     accent: "bg-clay/30",
