@@ -77,11 +77,11 @@ function ProjectDetail() {
   }, [selectedImage]);
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <div className={`blob ${p.accent} size-[28rem] -top-20 -right-32 animate-float`} />
       <div className="blob bg-sky/20 size-80 top-96 -left-32 animate-float" />
 
-      <article className="relative mx-auto max-w-4xl px-5 sm:px-6 md:px-10 py-10 sm:py-16 md:py-24">
+      <article className="relative mx-auto max-w-4xl px-4 sm:px-6 md:px-10 py-8 sm:py-16 md:py-24">
         <Reveal>
           <Link
             to="/projects"
@@ -211,23 +211,25 @@ function ProjectDetail() {
         {selectedImage &&
           createPortal(
             <div
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4 sm:p-6 md:p-10"
+              className="fixed inset-0 z-50 overflow-y-auto bg-black/85 px-3 py-6 sm:px-6 sm:py-8 md:px-10"
               onClick={() => setSelectedImage(null)}
             >
-              <button
-                type="button"
-                onClick={() => setSelectedImage(null)}
-                aria-label="Close image"
-                className="absolute top-4 right-4 sm:top-6 sm:right-6 z-10 grid place-items-center size-9 sm:size-10 rounded-full bg-background/90 border border-border hover:bg-secondary transition-colors"
-              >
-                <X className="size-4 sm:size-5" />
-              </button>
-              <img
-                src={selectedImage}
-                alt={p.title}
-                onClick={(e) => e.stopPropagation()}
-                className="max-h-[90vh] max-w-[92vw] sm:max-w-[90vw] w-auto h-auto object-contain rounded-2xl border border-border bg-card shadow-2xl"
-              />
+              <div className="flex min-h-full items-center justify-center">
+                <button
+                  type="button"
+                  onClick={() => setSelectedImage(null)}
+                  aria-label="Close image"
+                  className="fixed top-4 right-4 sm:top-6 sm:right-6 z-10 grid place-items-center size-9 sm:size-10 rounded-full bg-background/90 border border-border hover:bg-secondary transition-colors"
+                >
+                  <X className="size-4 sm:size-5" />
+                </button>
+                <img
+                  src={selectedImage}
+                  alt={p.title}
+                  onClick={(e) => e.stopPropagation()}
+                  className="mx-auto max-h-[85dvh] max-w-full w-auto h-auto object-contain rounded-2xl border border-border bg-card shadow-2xl"
+                />
+              </div>
             </div>,
             document.body,
           )}
