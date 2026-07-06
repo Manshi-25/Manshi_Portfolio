@@ -93,7 +93,7 @@ function Experience() {
   }, [selectedImage]);
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <div className="blob bg-clay/25 size-72 sm:size-96 top-10 -right-32 animate-float" />
       <div className="blob bg-sage/20 size-60 sm:size-80 top-[32rem] -left-28 animate-float" />
 

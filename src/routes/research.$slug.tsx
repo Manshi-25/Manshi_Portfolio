@@ -75,7 +75,7 @@ function PaperDetail() {
   }, [selectedImage]);
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <div className={`blob ${p.accent} size-[28rem] -top-20 -right-32 animate-float`} />
       <div className="blob bg-sage/20 size-80 top-96 -left-32 animate-float" />
 

@@ -242,7 +242,7 @@ function CertificationsMarquee() {
 
   return (
     <div
-      className="relative -mx-5 sm:-mx-6 md:-mx-10 overflow-hidden"
+      className="relative overflow-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -303,7 +303,7 @@ function CertificationsMarquee() {
 
 function Achievements() {
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <div className="blob bg-mustard/30 size-72 sm:size-96 top-10 -right-32 animate-float" />
       <div className="blob bg-plum/25 size-60 sm:size-72 top-[50rem] -left-20 animate-float" />
 

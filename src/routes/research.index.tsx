@@ -45,7 +45,7 @@ function Research() {
   const railScale = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <div className="mx-auto max-w-4xl px-5 sm:px-6 md:px-10 py-14 sm:py-20 md:py-32">
+    <div className="mx-auto max-w-4xl overflow-x-hidden px-5 sm:px-6 md:px-10 py-14 sm:py-20 md:py-32">
       <Reveal>
         <p className="text-xs uppercase tracking-[0.2em] text-clay mb-5 sm:mb-6 inline-flex items-center gap-2">
           <Sparkles className="size-3.5" aria-hidden="true" /> Research

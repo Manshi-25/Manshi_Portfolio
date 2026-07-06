@@ -124,7 +124,7 @@ function AboutSubNav() {
   }, []);
 
   return (
-    <div className="sticky top-14 sm:top-16 z-30 -mx-5 sm:-mx-6 md:-mx-10 px-5 sm:px-6 md:px-10 py-3 mb-4 bg-background/90 backdrop-blur-md border-b border-border/60">
+    <div className="sticky top-14 sm:top-16 z-30 px-5 sm:px-6 md:px-10 py-3 mb-4 bg-background/90 backdrop-blur-md border-b border-border/60">
       <nav className="flex flex-wrap gap-2" aria-label="About sections">
         {subNav.map((n) => {
           const Icon = n.icon;
@@ -161,7 +161,7 @@ function AboutSubNav() {
 
 function About() {
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <div className="blob bg-mustard/30 size-72 sm:size-96 top-10 -right-32 animate-float" />
       <div className="blob bg-plum/25 size-60 sm:size-72 top-[40rem] -left-20 animate-float" />
       <div className="relative mx-auto max-w-4xl px-5 sm:px-6 md:px-10 py-14 sm:py-20 md:py-28">
