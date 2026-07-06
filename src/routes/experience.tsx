@@ -5,7 +5,7 @@ import { createPortal } from "react-dom";
 import { Briefcase, Calendar, MapPin, CheckCircle2, ArrowUpRight, Code2, X } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { PhotoOrFallback } from "@/components/photo-or-fallback";
-
+import next from "@/assets/next-1.png";
 export const Route = createFileRoute("/experience")({
   head: () => ({
     meta: [
@@ -71,7 +71,7 @@ const takeaways = [
  * Paths must start with "/" (public folder), not "src/assets/..."
  * — that path only works for build-time imports, not runtime <img> src.
  */
-const images = ["/src/assets/next-1.png", "/projects/next-2.png", "/projects/next-3.png"];
+const images = [next, "/projects/next-2.png", "/projects/next-3.png"];
 
 function Experience() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
