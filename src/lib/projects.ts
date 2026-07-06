@@ -1,6 +1,6 @@
 import projNextstep from "@/assets/next-1.png";
 import projCoral from "@/assets/reef-1.png";
-import projVelara from "@/assets/proj-velara.jpg";
+import projVelara from "@/assets/vel-5.png";
 
 export type Project = {
   slug: string;
@@ -108,7 +108,7 @@ export const projects: Project[] = [
       "Designed for fast iteration on prompt and UX patterns",
     ],
     challenges: ["Shaping conversational UI that doesn't feel like another chatbot"],
-    gallery: ["/projects/velara-1.jpg", "/projects/velara-2.jpg"],
+    gallery: ["/projects/vel-1.png", "/projects/vel-2.png", "/projects/vel-3.png", "/projects/vel-4.png"],
   },
 ];
 

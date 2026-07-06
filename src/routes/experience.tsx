@@ -71,7 +71,7 @@ const takeaways = [
  * Paths must start with "/" (public folder), not "src/assets/..."
  * — that path only works for build-time imports, not runtime <img> src.
  */
-const images = ["src/assets/next-1.png", "/projects/next-2.png", "/projects/next-3.png"];
+const images = ["/src/assets/next-1.png", "/projects/next-2.png", "/projects/next-3.png"];
 
 function Experience() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
