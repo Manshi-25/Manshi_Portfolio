@@ -13,7 +13,6 @@ const OG_IMAGE = `${SITE_URL}/og-image.png`;
 import { SiteHeader, SiteFooter } from "../components/site-chrome";
 import { ScrollProgress } from "../components/scroll-progress";
 import { SmoothScroll } from "../components/smooth-scroll";
-import { BackButton } from "../components/back-button";
 import { CustomCursor } from "../components/cursor";
 import { PageTransition } from "../components/page-transition";
 import { SkipLink } from "../components/skip-link";
@@ -92,7 +91,6 @@ function RootComponent() {
       {!isLanding && <SmoothScroll />}
       {!isLanding && <ScrollProgress />}
       {!isLanding && <SiteHeader />}
-      {!isLanding && <BackButton />}
       <main id="main-content" className={isLanding ? "" : "min-h-[60vh]"}>
         {isLanding ? (
           <Outlet />

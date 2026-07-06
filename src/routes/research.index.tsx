@@ -3,6 +3,7 @@ import { ArrowUpRight, FileText, BookOpen, Sparkles } from "lucide-react";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 import { useRef, useState, type MouseEvent } from "react";
 import { Reveal } from "@/components/reveal";
+import { PhotoOrFallback } from "@/components/photo-or-fallback";
 import { papers } from "@/lib/research";
 import { useSpotlight } from "@/hooks/use-spotlight";
 
@@ -10,7 +11,10 @@ export const Route = createFileRoute("/research/")({
   head: () => ({
     meta: [
       { title: "Research Manshi Chauhan" },
-      { name: "description", content: "Publications on optimization, generative AI, and adversarial ML." },
+      {
+        name: "description",
+        content: "Publications on optimization, generative AI, and adversarial ML.",
+      },
       { property: "og:title", content: "Research Manshi Chauhan" },
       { property: "og:description", content: "Publications and book chapters." },
       { property: "og:type", content: "website" },
@@ -44,7 +48,7 @@ function Research() {
     <div className="mx-auto max-w-4xl px-5 sm:px-6 md:px-10 py-14 sm:py-20 md:py-32">
       <Reveal>
         <p className="text-xs uppercase tracking-[0.2em] text-clay mb-5 sm:mb-6 inline-flex items-center gap-2">
-          <Sparkles className="size-3.5" aria-hidden="true" />  Research
+          <Sparkles className="size-3.5" aria-hidden="true" /> Research
         </p>
         <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl leading-[1.02] tracking-tight text-balance">
           On machines <span className="italic text-clay">that learn</span>.
@@ -114,10 +118,23 @@ function PaperCard({
         onBlur={() => setHovered(false)}
         className="spotlight group block relative rounded-2xl border border-border bg-card p-6 sm:p-9 hover:border-clay/60 hover:shadow-2xl hover:shadow-plum/10 transition-all overflow-hidden"
       >
-        <div className={`absolute -top-24 ${offset ? "-right-24" : "-left-24"} size-60 rounded-full ${p.accent} blur-3xl opacity-50 group-hover:opacity-90 transition-opacity`} />
-        <div className={`absolute top-0 ${offset ? "left-0" : "right-0"} h-full w-1 bg-gradient-to-b from-plum via-clay to-mustard scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-500`} />
+        <div
+          className={`absolute -top-24 ${offset ? "-right-24" : "-left-24"} size-60 rounded-full ${p.accent} blur-3xl opacity-50 group-hover:opacity-90 transition-opacity`}
+        />
+        <div
+          className={`absolute top-0 ${offset ? "left-0" : "right-0"} h-full w-1 bg-gradient-to-b from-plum via-clay to-mustard scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-500`}
+        />
 
         <div className="relative">
+          <div className="relative rounded-xl overflow-hidden aspect-[21/9] sm:aspect-[3/1] mb-4 sm:mb-6 border border-border">
+            <PhotoOrFallback
+              src={p.images?.[0] ?? `/research/${p.slug}-1.jpg`}
+              alt={p.title}
+              label="Add a photo"
+              fit="contain"
+            />
+          </div>
+
           <div className="flex items-start justify-between gap-3 mb-3 sm:mb-4">
             <div className="flex items-center gap-2 text-[10px] sm:text-xs uppercase tracking-widest text-clay">
               <motion.span
@@ -125,7 +142,11 @@ function PaperCard({
                 transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                 className="inline-flex"
               >
-                {isBookChapter ? <BookOpen className="size-3.5" aria-hidden="true" /> : <FileText className="size-3.5" aria-hidden="true" />}
+                {isBookChapter ? (
+                  <BookOpen className="size-3.5" aria-hidden="true" />
+                ) : (
+                  <FileText className="size-3.5" aria-hidden="true" />
+                )}
               </motion.span>
               <span className="inline-flex items-center gap-1.5">
                 {isPublished && (
@@ -140,7 +161,9 @@ function PaperCard({
             <ArrowUpRight className="size-5 text-muted-foreground group-hover:text-clay group-hover:rotate-45 transition-all shrink-0" />
           </div>
 
-          <h2 className="font-serif text-xl sm:text-2xl md:text-3xl leading-snug mb-2 sm:mb-3 text-balance">{p.title}</h2>
+          <h2 className="font-serif text-xl sm:text-2xl md:text-3xl leading-snug mb-2 sm:mb-3 text-balance">
+            {p.title}
+          </h2>
           <div className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">{p.venue}</div>
 
           <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-1">
@@ -162,7 +185,11 @@ function PaperCard({
               but a taste of the writing is one interaction away */}
           <motion.div
             initial={false}
-            animate={{ height: hovered ? "auto" : 0, opacity: hovered ? 1 : 0, marginTop: hovered ? 14 : 0 }}
+            animate={{
+              height: hovered ? "auto" : 0,
+              opacity: hovered ? 1 : 0,
+              marginTop: hovered ? 14 : 0,
+            }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >

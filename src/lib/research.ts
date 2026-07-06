@@ -11,6 +11,10 @@ export type Paper = {
   takeaway: string;
   link?: string;
   linkLabel?: string;
+  /** Photos from the presentation / work — shown as a gallery on the paper page. */
+  images?: string[];
+  /** Certificate images (presentation / publication / participation certificates). */
+  certificates?: string[];
 };
 
 export const papers: Paper[] = [
@@ -40,6 +44,7 @@ export const papers: Paper[] = [
       "Predicting where a city will overheat is only half the job pairing the prediction with SHAP-based explanations is what turns a model into something a planner can actually act on.",
     link: "https://ieeexplore.ieee.org/document/11547950",
     linkLabel: "View on IEEE Xplore",
+    images: ["/research/UHI-1.png"],
   },
   {
     slug: "metaheuristic-oral-lesion",
@@ -68,11 +73,14 @@ export const papers: Paper[] = [
       "On noisy real-world clinical photos not curated histopathology slides pre-processing with metaheuristics mattered more than the classifier itself: smart image preparation closed most of the accuracy gap.",
     link: "https://ieeexplore.ieee.org/document/11564907",
     linkLabel: "View on IEEE Xplore",
+    images: ["/research/meta-1.png", "/research/meta-2.png", "/research/meta-3.png"],
+    certificates: ["/research/meta-cert.jpg"],
   },
   {
     slug: "adversarial-ml-cybersecurity",
     status: "Book chapter",
-    title: "Adversarial Machine Learning in Cybersecurity: A Comprehensive Analysis of Threats, Defenses, and Future Directions",
+    title:
+      "Adversarial Machine Learning in Cybersecurity: A Comprehensive Analysis of Threats, Defenses, and Future Directions",
     venue: "VIPS-TC, GGSIPU",
     tags: ["Adversarial ML", "Cybersecurity", "LLM Security"],
     accent: "bg-mustard/30",
@@ -111,6 +119,8 @@ export const papers: Paper[] = [
     methods: ["Literature synthesis", "Case-study analysis", "Ethical framework comparison"],
     takeaway:
       "The hard problem with LLMs isn't the model it's the gap between capability and accountability.",
+    images: ["/research/llm-1.png", "/research/llm-2.png", "/research/llm-3.png"],
+    certificates: ["/research/cog-cert.png"],
   },
 ];
 

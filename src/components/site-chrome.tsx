@@ -1,15 +1,15 @@
-
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Download, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { ThemeToggle } from "./theme-toggle";
 
 const nav = [
-  { to: "/home", label: "Index" },
   { to: "/about", label: "About" },
-  { to: "/work", label: "Work" },
-  { to: "/resume", label: "Resume" },
+  { to: "/projects", label: "Projects" },
+  
+  { to: "/experience", label: "Experience" },
   { to: "/research", label: "Research" },
+  { to: "/achievements", label: "Achievements" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -30,12 +30,16 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
     } else {
       document.body.style.overflow = "";
     }
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [open]);
 
   // Close on Escape
   useEffect(() => {
-    const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, [onClose]);
@@ -97,8 +101,22 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
             <Download className="size-4" /> Open resume
           </a>
           <div className="flex gap-4 text-xs text-muted-foreground">
-            <a href="https://github.com/Manshi-25" target="_blank" rel="noreferrer" className="link-underline">GitHub ↗</a>
-            <a href="https://www.linkedin.com/in/manshi-chauhan-860639315/" target="_blank" rel="noreferrer" className="link-underline">LinkedIn ↗</a>
+            <a
+              href="https://github.com/Manshi-25"
+              target="_blank"
+              rel="noreferrer"
+              className="link-underline"
+            >
+              GitHub ↗
+            </a>
+            <a
+              href="https://www.linkedin.com/in/manshi-chauhan-860639315/"
+              target="_blank"
+              rel="noreferrer"
+              className="link-underline"
+            >
+              LinkedIn ↗
+            </a>
           </div>
         </div>
       </div>
@@ -117,7 +135,9 @@ export function SiteHeader() {
             <span className="relative grid place-items-center size-7 rounded-full bg-gradient-to-br from-clay via-plum to-mustard shrink-0">
               <span className="font-serif text-background text-sm leading-none">m</span>
             </span>
-            <span className="font-serif text-base sm:text-lg tracking-tight truncate">Manshi Chauhan</span>
+            <span className="font-serif text-base sm:text-lg tracking-tight truncate">
+              Manshi Chauhan
+            </span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-7 text-sm" aria-label="Primary">
@@ -126,7 +146,10 @@ export function SiteHeader() {
                 key={n.to}
                 to={n.to}
                 className="link-underline text-muted-foreground hover:text-foreground transition-colors"
-                activeProps={{ className: "link-underline text-foreground", "aria-current": "page" }}
+                activeProps={{
+                  className: "link-underline text-foreground",
+                  "aria-current": "page",
+                }}
               >
                 {n.label}
               </Link>
@@ -175,13 +198,31 @@ export function SiteFooter() {
         </div>
         <div className="flex flex-col gap-2">
           <span className="text-xs uppercase tracking-widest text-clay mb-1">Elsewhere</span>
-          <a href="https://github.com/Manshi-25" target="_blank" rel="noreferrer" className="link-underline w-fit">GitHub ↗</a>
-          <a href="https://www.linkedin.com/in/manshi-chauhan-860639315/" target="_blank" rel="noreferrer" className="link-underline w-fit">LinkedIn ↗</a>
-          <a href="mailto:manshi25chauhan@gmail.com" className="link-underline w-fit">Email ↗</a>
+          <a
+            href="https://github.com/Manshi-25"
+            target="_blank"
+            rel="noreferrer"
+            className="link-underline w-fit"
+          >
+            GitHub ↗
+          </a>
+          <a
+            href="https://www.linkedin.com/in/manshi-chauhan-860639315/"
+            target="_blank"
+            rel="noreferrer"
+            className="link-underline w-fit"
+          >
+            LinkedIn ↗
+          </a>
+          <a href="mailto:manshi25chauhan@gmail.com" className="link-underline w-fit">
+            Email ↗
+          </a>
         </div>
         <div className="flex flex-col gap-2 md:items-end">
           <span className="text-xs uppercase tracking-widest text-clay mb-1">New Delhi, IN</span>
-          <span className="text-muted-foreground">© {new Date().getFullYear()} — Manshi Chauhan</span>
+          <span className="text-muted-foreground">
+            © {new Date().getFullYear()} — Manshi Chauhan
+          </span>
         </div>
       </div>
     </footer>

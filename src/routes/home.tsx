@@ -1,13 +1,17 @@
+
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
-import { ArrowUpRight, Download, Sparkles, MapPin } from "lucide-react";
+import { ArrowUpRight, Sparkles, MapPin, Briefcase, Calendar, CheckCircle2 } from "lucide-react";
 import { Reveal, WordReveal } from "@/components/reveal";
 
 export const Route = createFileRoute("/home")({
   head: () => ({
     meta: [
       { title: "Manshi Chauhan AI/ML Engineer & Full-Stack Developer" },
-      { name: "description", content: "B.Tech AI/ML undergraduate. Full-stack apps, ML systems and published research." },
+      {
+        name: "description",
+        content: "B.Tech AI/ML undergraduate. Full-stack apps, ML systems and published research.",
+      },
       { property: "og:title", content: "Manshi Chauhan Portfolio" },
       { property: "og:description", content: "Selected work, research and writing." },
       { property: "og:type", content: "website" },
@@ -24,8 +28,16 @@ export const Route = createFileRoute("/home")({
 });
 
 const skills = [
-  "React", "Next.js", "Node.js", "Python", "PyTorch",
-  "TensorFlow", "MongoDB", "TypeScript", "Tailwind", "Flask",
+  "React",
+  "Next.js",
+  "Node.js",
+  "Python",
+  "PyTorch",
+  "TensorFlow",
+  "MongoDB",
+  "TypeScript",
+  "Tailwind",
+  "Flask",
 ];
 
 function Index() {
@@ -38,12 +50,7 @@ function Index() {
         <div className="blob bg-mustard/30 size-56 sm:size-64 bottom-10 right-1/3 animate-float" />
 
         <div className="relative mx-auto max-w-6xl px-5 sm:px-6 md:px-10 pt-14 sm:pt-20 md:pt-28 pb-16 sm:pb-24 md:pb-32">
-          <Reveal>
-            <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs uppercase tracking-[0.18em] text-foreground/80 mb-6 sm:mb-8 px-3 py-1.5 rounded-full bg-card border border-border">
-              <span className="size-1.5 rounded-full bg-sage animate-pulse" />
-              Open to internships · 2026
-            </div>
-          </Reveal>
+          
 
           <h1 className="font-serif text-[clamp(2.25rem,9vw,7rem)] leading-[0.98] tracking-tight max-w-5xl text-balance">
             <WordReveal text="Hi, I'm Manshi  " />
@@ -55,33 +62,39 @@ function Index() {
             <WordReveal text="and publish." />
           </h1>
 
-          <Reveal delay={0.6} className="mt-6 sm:mt-10 max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed">
+          <Reveal
+            delay={0.6}
+            className="mt-6 sm:mt-10 max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed"
+          >
             <p>
-              A B.Tech student diving deep into the world of <span className="text-foreground">AI</span>,
+              A final-year B.Tech (AI &amp; ML) student diving deep into the world of{" "}
+              <span className="text-foreground">Artificial Intelligence</span>,
               <span className="text-foreground"> Machine Learning</span>, and
-              <span className="text-foreground"> Full-Stack Development</span>.
+              <span className="text-foreground"> Full-Stack Development.</span> 
+              
             </p>
             <p className="mt-3">
-              I'm not just learning to code I'm learning to solve problems the world actually has.
+              I'm not just learning to code but I'm learning to solve problems the world actually has.
             </p>
           </Reveal>
 
-          <Reveal delay={0.8} className="mt-8 sm:mt-10 flex flex-wrap items-center gap-2.5 sm:gap-3">
+          <Reveal
+            delay={0.8}
+            className="mt-8 sm:mt-10 flex flex-wrap items-center gap-2.5 sm:gap-3"
+          >
             <Link
-              to="/work"
+              to="/projects"
               className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-5 py-2.5 sm:px-6 sm:py-3 text-sm hover:bg-clay transition-colors"
             >
-              See my work
+              See my projects
               <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
-            <a
-              href="/Manshi_Chauhan_Resume.pdf"
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              to="/experience"
               className="group inline-flex items-center gap-2 rounded-full bg-clay text-background px-5 py-2.5 sm:px-6 sm:py-3 text-sm hover:bg-clay-deep transition-colors"
             >
-              <Download className="size-4" /> Resume
-            </a>
+              <Briefcase className="size-4" /> Experience
+            </Link>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 sm:px-6 sm:py-3 text-sm hover:bg-secondary transition-colors"
@@ -90,7 +103,10 @@ function Index() {
             </Link>
           </Reveal>
 
-          <Reveal delay={1.0} className="mt-10 flex items-center gap-2 text-xs text-muted-foreground">
+          <Reveal
+            delay={1.0}
+            className="mt-10 flex items-center gap-2 text-xs text-muted-foreground"
+          >
             <MapPin className="size-3.5 text-clay" /> New Delhi, India
           </Reveal>
         </div>
@@ -113,10 +129,13 @@ function Index() {
         <Reveal>
           <div className="flex items-end justify-between mb-8 sm:mb-12">
             <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-clay mb-3">  Selected work</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-clay mb-3"> PROJECTS</p>
               <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl">Recent builds.</h2>
             </div>
-            <Link to="/work" className="hidden md:inline-flex link-underline text-sm text-muted-foreground hover:text-foreground">
+            <Link
+              to="/projects"
+              className="hidden md:inline-flex link-underline text-sm text-muted-foreground hover:text-foreground"
+            >
               View all →
             </Link>
           </div>
@@ -131,16 +150,27 @@ function Index() {
                 rel="noreferrer"
                 className="group relative block rounded-2xl border border-border bg-card p-6 sm:p-8 hover:border-clay/60 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-clay/10 overflow-hidden"
               >
-                <div className={`absolute -top-16 -right-16 size-48 rounded-full ${p.accent} blur-3xl opacity-60 group-hover:opacity-100 transition-opacity`} />
+                <div
+                  className={`absolute -top-16 -right-16 size-48 rounded-full ${p.accent} blur-3xl opacity-60 group-hover:opacity-100 transition-opacity`}
+                />
                 <div className="relative flex items-start justify-between mb-10 sm:mb-12">
-                  <span className="text-[10px] sm:text-xs uppercase tracking-widest text-clay">{p.tag}</span>
+                  <span className="text-[10px] sm:text-xs uppercase tracking-widest text-clay">
+                    {p.tag}
+                  </span>
                   <ArrowUpRight className="size-5 text-muted-foreground group-hover:text-clay group-hover:rotate-45 transition-all" />
                 </div>
-                <h3 className="relative font-serif text-xl sm:text-2xl md:text-3xl mb-2 sm:mb-3">{p.title}</h3>
+                <h3 className="relative font-serif text-xl sm:text-2xl md:text-3xl mb-2 sm:mb-3">
+                  {p.title}
+                </h3>
                 <p className="relative text-sm sm:text-base text-muted-foreground">{p.desc}</p>
                 <div className="relative mt-5 sm:mt-6 flex flex-wrap gap-1.5 sm:gap-2">
                   {p.stack.map((s) => (
-                    <span key={s} className="text-[10px] sm:text-xs px-2.5 py-1 rounded-full bg-secondary text-foreground/70">{s}</span>
+                    <span
+                      key={s}
+                      className="text-[10px] sm:text-xs px-2.5 py-1 rounded-full bg-secondary text-foreground/70"
+                    >
+                      {s}
+                    </span>
                   ))}
                 </div>
               </a>
@@ -149,7 +179,69 @@ function Index() {
         </div>
 
         <Reveal delay={0.2} className="mt-8 sm:hidden">
-          <Link to="/work" className="link-underline text-sm text-muted-foreground hover:text-foreground">View all work →</Link>
+          <Link
+            to="/projects"
+            className="link-underline text-sm text-muted-foreground hover:text-foreground"
+          >
+            View all projects →
+          </Link>
+        </Reveal>
+      </section>
+
+      {/* Experience */}
+      <section className="mx-auto max-w-6xl px-5 sm:px-6 md:px-10 py-16 sm:py-24 md:py-28">
+        <Reveal>
+          <p className="text-xs uppercase tracking-[0.2em] text-clay mb-3"> Experience</p>
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl mb-8 sm:mb-12">
+            Hands-on, not just theory.
+          </h2>
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <div className="relative rounded-2xl sm:rounded-3xl border border-border bg-card p-6 sm:p-10 overflow-hidden">
+            <div className="absolute -top-16 -right-16 size-56 rounded-full bg-clay/20 blur-3xl" />
+            <div className="relative flex flex-col md:flex-row md:items-start md:justify-between gap-5 sm:gap-6">
+              <div className="flex items-start gap-4">
+                <div className="grid place-items-center size-12 sm:size-14 rounded-xl bg-clay/15 text-clay shrink-0">
+                  <Briefcase className="size-6 sm:size-7" />
+                </div>
+                <div>
+                  <h3 className="font-serif text-xl sm:text-2xl">Web Developer Intern</h3>
+                  <p className="text-clay text-sm sm:text-base mt-0.5">Next Step Admission</p>
+                </div>
+              </div>
+              <span className="inline-flex items-center gap-2 text-xs sm:text-sm text-muted-foreground shrink-0">
+                <Calendar className="size-3.5 text-clay" /> 2025 · Internship
+              </span>
+            </div>
+
+            <p className="relative mt-5 sm:mt-6 text-sm sm:text-base text-muted-foreground leading-relaxed max-w-3xl">
+              Built and improved an admission platform with scalable React UI,
+              REST APIs in Node.js, and JWT-based authentication for students,
+              counsellors, and admins.
+            </p>
+
+            <div className="relative mt-5 sm:mt-6 grid gap-2 sm:grid-cols-2">
+              {[
+                "Shipped features on a live product used by real students",
+                "Built & integrated REST APIs with Node.js and MongoDB",
+                "Implemented JWT auth with role-based access",
+                "Collaborated directly with the founding team on fixes",
+              ].map((point) => (
+                <div key={point} className="flex items-start gap-2 text-sm text-foreground/80">
+                  <CheckCircle2 className="size-4 text-clay shrink-0 mt-0.5" />
+                  {point}
+                </div>
+              ))}
+            </div>
+
+            <Link
+              to="/experience"
+              className="relative mt-6 sm:mt-8 inline-flex items-center gap-2 text-sm text-clay link-underline"
+            >
+              Read the full story <ArrowUpRight className="size-3.5" />
+            </Link>
+          </div>
         </Reveal>
       </section>
 
@@ -160,13 +252,15 @@ function Index() {
             <div className="absolute -top-20 -left-20 size-72 rounded-full bg-clay/40 blur-3xl" />
             <div className="absolute -bottom-20 -right-20 size-72 rounded-full bg-plum/40 blur-3xl" />
             <blockquote className="relative font-serif text-lg sm:text-2xl md:text-3xl leading-snug max-w-3xl text-balance">
-              "The small details a button's kerning, a model's latency, a line no one reads  
-              they add up to the thing."
+              "The small details a button's kerning, a model's latency, a line no one reads they add
+              up to the thing."
             </blockquote>
             <div className="relative mt-8 sm:mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-sm">
               {stats.map((s) => (
                 <div key={s.label}>
-                  <div className={`font-serif text-2xl sm:text-3xl md:text-4xl ${s.color}`}>{s.value}</div>
+                  <div className={`font-serif text-2xl sm:text-3xl md:text-4xl ${s.color}`}>
+                    {s.value}
+                  </div>
                   <div className="text-background/60 mt-1 text-xs sm:text-sm">{s.label}</div>
                 </div>
               ))}
@@ -188,7 +282,7 @@ const featured = [
     accent: "bg-clay/30",
   },
   {
-    title: "Coral Reef Health Detection",
+    title: "ReefVision",
     tag: "Deep Learning",
     desc: "Four-model classifier for healthy vs. bleached corals, served via Flask.",
     stack: ["TF Lite", "Flask", "React"],

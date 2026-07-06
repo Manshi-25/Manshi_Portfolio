@@ -1,5 +1,5 @@
-import projNextstep from "@/assets/proj-nextstep.jpg";
-import projCoral from "@/assets/proj-coral.jpg";
+import projNextstep from "@/assets/next-1.png";
+import projCoral from "@/assets/reef-1.png";
 import projVelara from "@/assets/proj-velara.jpg";
 
 export type Project = {
@@ -20,6 +20,8 @@ export type Project = {
   myRole?: string;
   features: string[];
   challenges?: string[];
+  /** Extra screenshots — drop files in /public/projects/<slug>-1.jpg etc. */
+  gallery?: string[];
 };
 
 export const projects: Project[] = [
@@ -27,8 +29,9 @@ export const projects: Project[] = [
     slug: "next-step-admission",
     title: "Next Step Admission",
     year: "2025",
-    role: "Web Developer Intern · Jun-Jul 2025",
-    tagline: "AI-driven admission guidance platform helping students discover and apply to colleges.",
+    role: "Product Development Project · 2025",
+    tagline:
+      "A student guidance platform that simplifies college discovery, admissions support, and study abroad planning.",
     headline: "Because choosing the right college shouldn't feel like guessing in the dark.",
     image: projNextstep,
     accent: "bg-clay/30",
@@ -36,13 +39,12 @@ export const projects: Project[] = [
     live: "https://nextstepadmission.vercel.app",
     github: "https://github.com/Manshi-25/NextStepAdmission",
     overview:
-      "A platform that turns the chaos of college research into one clear, personal flow which is fast, clean, and built to scale.",
+      "A full-stack web experience designed to make education decisions feel clearer, faster, and more personalized.",
     purpose:
-      "Every year, thousands of students in India face one of these most stressful decisions of their lives like which college, which course, which future? They scroll endlessly, get overwhelmed with information, and often make choices based on incomplete data.",
-    need:
-      "There was a gap between what students needed (clear, personalized guidance) and what was available (scattered, generic information). Next Step Admission was built to bridge that.",
+      "Students often face too much scattered information when choosing a college, course, or study abroad path. The project aimed to turn that confusion into a guided, streamlined experience.",
+    need: "There was a gap between what students needed, clear and personalized guidance, and what was commonly available, scattered and generic information. The platform was built to bridge that gap.",
     myRole:
-      "As a Web Developer Intern, I built and optimized core features of the platform, from frontend components to backend API connections by ensuring the experience was fast, clean, and intuitive.",
+      "I contributed to the product by building the interface, connecting the backend services, and supporting secure access so the experience felt reliable and scalable.",
     features: [
       "AI-powered college recommendations from user preferences",
       "JWT-secured auth with protected routes",
@@ -53,13 +55,15 @@ export const projects: Project[] = [
       "Designing a recommendation flow that stays fast at scale",
       "Hardening auth and session handling for real users",
     ],
+    gallery: ["/projects/next-2.png", "/projects/next-3.png", "/projects/next-4.png"],
   },
   {
     slug: "coral-reef",
     title: "ReefVision",
     year: "2024",
     role: "Personal · Deep Learning",
-    tagline: "Classify coral reefs as healthy or bleached from underwater images using four DL models.",
+    tagline:
+      "Classify coral reefs as healthy or bleached from underwater images using four DL models.",
     headline: "The ocean can't speak. So I built something that could.",
     image: projCoral,
     accent: "bg-sage/40",
@@ -70,8 +74,7 @@ export const projects: Project[] = [
       "A full-stack ML web app for marine ecosystem monitoring upload, infer, log. Healthy or bleached, with confidence.",
     purpose:
       "Coral reefs cover less than 1% of the ocean floor yet they support over 25% of all marine life. But they're dying. Bleaching events, rising ocean temperatures, and pollution are wiping them out faster than scientists can track manually.",
-    need:
-      "Traditional reef monitoring requires trained marine biologists to physically dive and assess corals it's slow, expensive, and impossible to scale. There had to be a smarter way.",
+    need: "Traditional reef monitoring requires trained marine biologists to physically dive and assess corals it's slow, expensive, and impossible to scale. There had to be a smarter way.",
     features: [
       "CNN, ResNet50, DenseNet and EfficientNet pick a model per request",
       "TensorFlow Lite inference for low-latency predictions",
@@ -83,6 +86,7 @@ export const projects: Project[] = [
       "Absolute path loading for TFLite models in cloud",
       "Tuning CORS between Vercel frontend and Render backend",
     ],
+    gallery: ["/projects/reef-2.png", "/projects/reef-3.png", "/projects/reef-4.png"],
   },
   {
     slug: "velara",
@@ -104,6 +108,7 @@ export const projects: Project[] = [
       "Designed for fast iteration on prompt and UX patterns",
     ],
     challenges: ["Shaping conversational UI that doesn't feel like another chatbot"],
+    gallery: ["/projects/velara-1.jpg", "/projects/velara-2.jpg"],
   },
 ];
 
