@@ -1,72 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://manshi-chauhan.vercel.app/</loc>
+    <loc>https://manshi-chauhan.me/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://manshi-chauhan.vercel.app/home</loc>
+    <loc>https://manshi-chauhan.me/home</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://manshi-chauhan.vercel.app/about</loc>
+    <loc>https://manshi-chauhan.me/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://manshi-chauhan.vercel.app/work</loc>
+    <loc>https://manshi-chauhan.me/work</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://manshi-chauhan.vercel.app/work/next-step-admission</loc>
+    <loc>https://manshi-chauhan.me/work/next-step-admission</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://manshi-chauhan.vercel.app/work/coral-reef-vision</loc>
+    <loc>https://manshi-chauhan.me/work/coral-reef-vision</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://manshi-chauhan.vercel.app/work/velara</loc>
+    <loc>https://manshi-chauhan.me/work/velara</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://manshi-chauhan.vercel.app/research</loc>
+    <loc>https://manshi-chauhan.me/research</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://manshi-chauhan.vercel.app/research/uhi-predictive-analytics</loc>
+    <loc>https://manshi-chauhan.me/research/uhi-predictive-analytics</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://manshi-chauhan.vercel.app/research/metaheuristic-oral-lesion</loc>
+    <loc>https://manshi-chauhan.me/research/metaheuristic-oral-lesion</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://manshi-chauhan.vercel.app/research/adversarial-ml-cybersecurity</loc>
+    <loc>https://manshi-chauhan.me/research/adversarial-ml-cybersecurity</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://manshi-chauhan.vercel.app/research/cognitive-contours</loc>
+    <loc>https://manshi-chauhan.me/research/cognitive-contours</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://manshi-chauhan.vercel.app/resume</loc>
+    <loc>https://manshi-chauhan.me/resume</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://manshi-chauhan.vercel.app/contact</loc>
+    <loc>https://manshi-chauhan.me/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

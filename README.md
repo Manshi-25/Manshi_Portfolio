@@ -2,7 +2,7 @@
  
 Personal portfolio website of Manshi Chauhan, AI/ML Engineer & Full-Stack Developer. Built with TanStack Start, React, Tailwind CSS v4, and Framer Motion.
  
-🔗 **Live:** [manshi-chauhan.vercel.app](https://manshi-chauhan.vercel.app)
+🔗 **Live:** [manshi-chauhan.me](https://manshi-chauhan.me)
  
 ---
  
