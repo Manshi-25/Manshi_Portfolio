@@ -166,7 +166,7 @@ function About() {
       <div className="blob bg-plum/25 size-60 sm:size-72 top-[40rem] -left-20 animate-float" />
       <div className="relative mx-auto max-w-4xl px-5 sm:px-6 md:px-10 py-14 sm:py-20 md:py-28">
         <Reveal>
-          <p className="text-xs uppercase tracking-[0.2em] text-clay mb-5 sm:mb-6">— About</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-clay mb-5 sm:mb-6">About</p>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl leading-[1.02] tracking-tight text-balance">
             Builder by day,{" "}
             <span className="italic bg-gradient-to-r from-clay to-plum bg-clip-text text-transparent">

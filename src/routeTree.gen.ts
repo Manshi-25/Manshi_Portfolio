@@ -20,8 +20,10 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ResearchIndexRouteImport } from './routes/research.index'
 import { Route as ProjectsIndexRouteImport } from './routes/projects.index'
+import { Route as ExperienceIndexRouteImport } from './routes/experience.index'
 import { Route as ResearchSlugRouteImport } from './routes/research.$slug'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
+import { Route as ExperienceSlugRouteImport } from './routes/experience.$slug'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -78,6 +80,11 @@ const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
   path: '/',
   getParentRoute: () => ProjectsRoute,
 } as any)
+const ExperienceIndexRoute = ExperienceIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ExperienceRoute,
+} as any)
 const ResearchSlugRoute = ResearchSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -88,19 +95,26 @@ const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => ProjectsRoute,
 } as any)
+const ExperienceSlugRoute = ExperienceSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ExperienceRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/achievements': typeof AchievementsRoute
   '/contact': typeof ContactRoute
-  '/experience': typeof ExperienceRoute
+  '/experience': typeof ExperienceRouteWithChildren
   '/home': typeof HomeRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/research': typeof ResearchRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/experience/$slug': typeof ExperienceSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/research/$slug': typeof ResearchSlugRoute
+  '/experience/': typeof ExperienceIndexRoute
   '/projects/': typeof ProjectsIndexRoute
   '/research/': typeof ResearchIndexRoute
 }
@@ -109,11 +123,12 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/achievements': typeof AchievementsRoute
   '/contact': typeof ContactRoute
-  '/experience': typeof ExperienceRoute
   '/home': typeof HomeRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/experience/$slug': typeof ExperienceSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/research/$slug': typeof ResearchSlugRoute
+  '/experience': typeof ExperienceIndexRoute
   '/projects': typeof ProjectsIndexRoute
   '/research': typeof ResearchIndexRoute
 }
@@ -123,13 +138,15 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/achievements': typeof AchievementsRoute
   '/contact': typeof ContactRoute
-  '/experience': typeof ExperienceRoute
+  '/experience': typeof ExperienceRouteWithChildren
   '/home': typeof HomeRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/research': typeof ResearchRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/experience/$slug': typeof ExperienceSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/research/$slug': typeof ResearchSlugRoute
+  '/experience/': typeof ExperienceIndexRoute
   '/projects/': typeof ProjectsIndexRoute
   '/research/': typeof ResearchIndexRoute
 }
@@ -145,8 +162,10 @@ export interface FileRouteTypes {
     | '/projects'
     | '/research'
     | '/sitemap.xml'
+    | '/experience/$slug'
     | '/projects/$slug'
     | '/research/$slug'
+    | '/experience/'
     | '/projects/'
     | '/research/'
   fileRoutesByTo: FileRoutesByTo
@@ -155,11 +174,12 @@ export interface FileRouteTypes {
     | '/about'
     | '/achievements'
     | '/contact'
-    | '/experience'
     | '/home'
     | '/sitemap.xml'
+    | '/experience/$slug'
     | '/projects/$slug'
     | '/research/$slug'
+    | '/experience'
     | '/projects'
     | '/research'
   id:
@@ -173,8 +193,10 @@ export interface FileRouteTypes {
     | '/projects'
     | '/research'
     | '/sitemap.xml'
+    | '/experience/$slug'
     | '/projects/$slug'
     | '/research/$slug'
+    | '/experience/'
     | '/projects/'
     | '/research/'
   fileRoutesById: FileRoutesById
@@ -184,7 +206,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AchievementsRoute: typeof AchievementsRoute
   ContactRoute: typeof ContactRoute
-  ExperienceRoute: typeof ExperienceRoute
+  ExperienceRoute: typeof ExperienceRouteWithChildren
   HomeRoute: typeof HomeRoute
   ProjectsRoute: typeof ProjectsRouteWithChildren
   ResearchRoute: typeof ResearchRouteWithChildren
@@ -270,6 +292,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsIndexRouteImport
       parentRoute: typeof ProjectsRoute
     }
+    '/experience/': {
+      id: '/experience/'
+      path: '/'
+      fullPath: '/experience/'
+      preLoaderRoute: typeof ExperienceIndexRouteImport
+      parentRoute: typeof ExperienceRoute
+    }
     '/research/$slug': {
       id: '/research/$slug'
       path: '/$slug'
@@ -284,8 +313,29 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsSlugRouteImport
       parentRoute: typeof ProjectsRoute
     }
+    '/experience/$slug': {
+      id: '/experience/$slug'
+      path: '/$slug'
+      fullPath: '/experience/$slug'
+      preLoaderRoute: typeof ExperienceSlugRouteImport
+      parentRoute: typeof ExperienceRoute
+    }
   }
 }
+
+interface ExperienceRouteChildren {
+  ExperienceSlugRoute: typeof ExperienceSlugRoute
+  ExperienceIndexRoute: typeof ExperienceIndexRoute
+}
+
+const ExperienceRouteChildren: ExperienceRouteChildren = {
+  ExperienceSlugRoute: ExperienceSlugRoute,
+  ExperienceIndexRoute: ExperienceIndexRoute,
+}
+
+const ExperienceRouteWithChildren = ExperienceRoute._addFileChildren(
+  ExperienceRouteChildren,
+)
 
 interface ProjectsRouteChildren {
   ProjectsSlugRoute: typeof ProjectsSlugRoute
@@ -320,7 +370,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AchievementsRoute: AchievementsRoute,
   ContactRoute: ContactRoute,
-  ExperienceRoute: ExperienceRoute,
+  ExperienceRoute: ExperienceRouteWithChildren,
   HomeRoute: HomeRoute,
   ProjectsRoute: ProjectsRouteWithChildren,
   ResearchRoute: ResearchRouteWithChildren,

@@ -16,9 +16,9 @@ export const Route = createFileRoute("/projects/$slug")({
   head: ({ loaderData }) => ({
     meta: loaderData
       ? [
-          { title: `${loaderData.title} — Manshi Chauhan` },
+          { title: `${loaderData.title} | Manshi Chauhan` },
           { name: "description", content: loaderData.tagline },
-          { property: "og:title", content: `${loaderData.title} — Manshi Chauhan` },
+          { property: "og:title", content: `${loaderData.title} | Manshi Chauhan` },
           { property: "og:description", content: loaderData.tagline },
           { property: "og:type", content: "article" },
           {
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/projects/$slug")({
           },
           { property: "og:image", content: "https://manshi-chauhan.me/og-image.png" },
           { name: "twitter:card", content: "summary_large_image" },
-          { name: "twitter:title", content: `${loaderData.title} — Manshi Chauhan` },
+          { name: "twitter:title", content: `${loaderData.title} | Manshi Chauhan` },
           { name: "twitter:description", content: loaderData.tagline },
           { name: "twitter:image", content: "https://manshi-chauhan.me/og-image.png" },
         ]

@@ -16,7 +16,7 @@ export const Route = createFileRoute("/research/$slug")({
   head: ({ loaderData }) => ({
     meta: loaderData
       ? [
-          { title: `${loaderData.title} — Manshi Chauhan` },
+          { title: `${loaderData.title} | Manshi Chauhan` },
           { name: "description", content: loaderData.abstract.slice(0, 155) },
           { property: "og:title", content: loaderData.title },
           { property: "og:description", content: loaderData.abstract.slice(0, 155) },

@@ -27,19 +27,19 @@ import { PhotoOrFallback } from "@/components/photo-or-fallback";
 export const Route = createFileRoute("/achievements")({
   head: () => ({
     meta: [
-      { title: "Achievements — Manshi Chauhan" },
+      { title: "Achievements | Manshi Chauhan" },
       {
         name: "description",
         content:
-          "Certifications earned and events participated in — AWS, Google Cloud, Red Hat, hackathons and more.",
+          "Certifications earned and events participated in - AWS, Google Cloud, Red Hat, hackathons and more.",
       },
-      { property: "og:title", content: "Achievements — Manshi Chauhan" },
+      { property: "og:title", content: "Achievements | Manshi Chauhan" },
       { property: "og:description", content: "Certifications and participations." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `https://manshi-chauhan.me/achievements` },
       { property: "og:image", content: "https://manshi-chauhan.me/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Achievements — Manshi Chauhan" },
+      { name: "twitter:title", content: "Achievements | Manshi Chauhan" },
       { name: "twitter:description", content: "Certifications and participations." },
       { name: "twitter:image", content: "https://manshi-chauhan.me/og-image.png" },
     ],
@@ -310,7 +310,7 @@ function Achievements() {
       <div className="relative mx-auto max-w-5xl px-5 sm:px-6 md:px-10 py-14 sm:py-20 md:py-28">
         <Reveal>
           <p className="text-xs uppercase tracking-[0.2em] text-clay mb-5 sm:mb-6">
-            — Achievements
+            Achievements
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl leading-[1.02] tracking-tight text-balance">
             Certifications earned,{" "}

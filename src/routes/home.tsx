@@ -191,58 +191,123 @@ function Index() {
       {/* Experience */}
       <section className="mx-auto max-w-6xl px-5 sm:px-6 md:px-10 py-16 sm:py-24 md:py-28">
         <Reveal>
-          <p className="text-xs uppercase tracking-[0.2em] text-clay mb-3"> Experience</p>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl mb-8 sm:mb-12">
-            Hands-on, not just theory.
-          </h2>
-        </Reveal>
-
-        <Reveal delay={0.1}>
-          <div className="relative rounded-2xl sm:rounded-3xl border border-border bg-card p-6 sm:p-10 overflow-hidden">
-            <div className="absolute -top-16 -right-16 size-56 rounded-full bg-clay/20 blur-3xl" />
-            <div className="relative flex flex-col md:flex-row md:items-start md:justify-between gap-5 sm:gap-6">
-              <div className="flex items-start gap-4">
-                <div className="grid place-items-center size-12 sm:size-14 rounded-xl bg-clay/15 text-clay shrink-0">
-                  <Briefcase className="size-6 sm:size-7" />
-                </div>
-                <div>
-                  <h3 className="font-serif text-xl sm:text-2xl">Web Developer Intern</h3>
-                  <p className="text-clay text-sm sm:text-base mt-0.5">Next Step Admission</p>
-                </div>
-              </div>
-              <span className="inline-flex items-center gap-2 text-xs sm:text-sm text-muted-foreground shrink-0">
-                <Calendar className="size-3.5 text-clay" /> 2025 · Internship
-              </span>
+          <div className="flex items-end justify-between mb-8 sm:mb-12">
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-clay mb-3"> Experience</p>
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl">
+                Hands-on, not just theory.
+              </h2>
             </div>
-
-            <p className="relative mt-5 sm:mt-6 text-sm sm:text-base text-muted-foreground leading-relaxed max-w-3xl">
-              Built and improved an admission platform with scalable React UI,
-              REST APIs in Node.js, and JWT-based authentication for students,
-              counsellors, and admins.
-            </p>
-
-            <div className="relative mt-5 sm:mt-6 grid gap-2 sm:grid-cols-2">
-              {[
-                "Shipped features on a live product used by real students",
-                "Built & integrated REST APIs with Node.js and MongoDB",
-                "Implemented JWT auth with role-based access",
-                "Collaborated directly with the founding team on fixes",
-              ].map((point) => (
-                <div key={point} className="flex items-start gap-2 text-sm text-foreground/80">
-                  <CheckCircle2 className="size-4 text-clay shrink-0 mt-0.5" />
-                  {point}
-                </div>
-              ))}
-            </div>
-
             <Link
               to="/experience"
-              className="relative mt-6 sm:mt-8 inline-flex items-center gap-2 text-sm text-clay link-underline"
+              className="hidden md:inline-flex link-underline text-sm text-muted-foreground hover:text-foreground"
             >
-              Read the full story <ArrowUpRight className="size-3.5" />
+              Explore all →
             </Link>
           </div>
         </Reveal>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {/* Card 1: Web Developer Intern */}
+          <Reveal delay={0.1}>
+            <div className="relative h-full flex flex-col justify-between rounded-2xl sm:rounded-3xl border border-border bg-card p-6 sm:p-8 overflow-hidden hover:border-clay/60 transition-colors">
+              <div className="absolute -top-16 -right-16 size-48 rounded-full bg-clay/20 blur-3xl" />
+              <div>
+                <div className="relative flex items-start justify-between gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="grid place-items-center size-11 rounded-xl bg-clay/15 text-clay shrink-0">
+                      <Briefcase className="size-5 sm:size-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-serif text-xl sm:text-2xl">Web Developer Intern</h3>
+                      <p className="text-clay text-sm font-medium mt-0.5">Next Step Admission</p>
+                    </div>
+                  </div>
+                </div>
+
+                <span className="mt-4 inline-flex items-center gap-2 text-xs text-muted-foreground">
+                  <Calendar className="size-3.5 text-clay" /> 2025 · Internship
+                </span>
+
+                <p className="relative mt-4 text-sm text-muted-foreground leading-relaxed">
+                  Built and improved an admission platform with scalable React UI, REST APIs in Node.js,
+                  and JWT-based authentication for students, counsellors, and admins.
+                </p>
+
+                <div className="relative mt-5 grid gap-2">
+                  {[
+                    "Shipped features on a live product used by real students",
+                    "Built & integrated REST APIs with Node.js and MongoDB",
+                    "Implemented JWT auth with role-based access",
+                  ].map((point) => (
+                    <div key={point} className="flex items-start gap-2 text-xs sm:text-sm text-foreground/80">
+                      <CheckCircle2 className="size-4 text-clay shrink-0 mt-0.5" />
+                      {point}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <Link
+                to="/experience/$slug"
+                params={{ slug: "next-step-admission" }}
+                className="relative mt-6 pt-4 border-t border-border/60 inline-flex items-center gap-2 text-sm text-clay link-underline"
+              >
+                Read full story <ArrowUpRight className="size-3.5" />
+              </Link>
+            </div>
+          </Reveal>
+
+          {/* Card 2: PAI Faculty */}
+          <Reveal delay={0.2}>
+            <div className="relative h-full flex flex-col justify-between rounded-2xl sm:rounded-3xl border border-border bg-card p-6 sm:p-8 overflow-hidden hover:border-plum/60 transition-colors">
+              <div className="absolute -top-16 -right-16 size-48 rounded-full bg-plum/20 blur-3xl" />
+              <div>
+                <div className="relative flex items-start justify-between gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="grid place-items-center size-11 rounded-xl bg-plum/15 text-plum shrink-0">
+                      <Briefcase className="size-5 sm:size-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-serif text-xl sm:text-2xl">EM and PAI Faculty</h3>
+                      <p className="text-plum text-sm font-medium mt-0.5">BunkToBrains</p>
+                    </div>
+                  </div>
+                </div>
+
+                <span className="mt-4 inline-flex items-center gap-2 text-xs text-muted-foreground">
+                  <Calendar className="size-3.5 text-clay" /> 2024 – Present · Faculty
+                </span>
+
+                <p className="relative mt-4 text-sm text-muted-foreground leading-relaxed">
+                  Teaching Python & Artificial Intelligence (PAI). Designing hands-on ML curricula,
+                  leading live coding workshops, and mentoring aspiring AI developers.
+                </p>
+
+                <div className="relative mt-5 grid gap-2">
+                  {[
+                    "Designed & taught Python & AI curriculum to students",
+                    "Led live coding workshops & hands-on ML projects",
+                    "Mentored students on clean code & AI engineering",
+                  ].map((point) => (
+                    <div key={point} className="flex items-start gap-2 text-xs sm:text-sm text-foreground/80">
+                      <CheckCircle2 className="size-4 text-clay shrink-0 mt-0.5" />
+                      {point}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <Link
+                to="/experience/$slug"
+                params={{ slug: "bunktobrains" }}
+                className="relative mt-6 pt-4 border-t border-border/60 inline-flex items-center gap-2 text-sm text-clay link-underline"
+              >
+                Read full story <ArrowUpRight className="size-3.5" />
+              </Link>
+            </div>
+          </Reveal>
+        </div>
       </section>
 
       {/* Stats */}

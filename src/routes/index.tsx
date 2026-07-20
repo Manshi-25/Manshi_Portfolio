@@ -6,7 +6,7 @@ import { ArrowDown } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Manshi Chauhan — Portfolio" },
+      { title: "Manshi Chauhan | Portfolio" },
       { name: "description", content: "AI/ML Engineer & Full-Stack Developer." },
     ],
   }),

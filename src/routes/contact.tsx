@@ -7,16 +7,16 @@ import { motion, AnimatePresence } from "motion/react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Manshi Chauhan" },
-      { name: "description", content: "Get in touch with Manshi Chauhan — email, GitHub, LinkedIn." },
-      { property: "og:title", content: "Contact — Manshi Chauhan" },
-      { property: "og:description", content: "Reach out for collaborations, internships or a chat." },
+      { title: "Contact | Manshi Chauhan" },
+      { name: "description", content: "Get in touch with Manshi Chauhan - email, GitHub, LinkedIn." },
+      { property: "og:title", content: "Contact | Manshi Chauhan" },
+      { property: "og:description", content: "Say hello." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `https://manshi-chauhan.me/contact` },
       { property: "og:image", content: "https://manshi-chauhan.me/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Contact — Manshi Chauhan" },
-      { name: "twitter:description", content: "Reach out for collaborations, internships or a chat." },
+      { name: "twitter:title", content: "Contact | Manshi Chauhan" },
+      { name: "twitter:description", content: "Say hello." },
       { name: "twitter:image", content: "https://manshi-chauhan.me/og-image.png" },
     ],
     links: [{ rel: "canonical", href: `https://manshi-chauhan.me/contact` }],
@@ -68,7 +68,7 @@ function Contact() {
     // animation was causing the whole page to repaint on every focus event
     <div className="mx-auto max-w-4xl px-6 md:px-10 py-20 md:py-28">
       <Reveal>
-        <p className="text-xs uppercase tracking-[0.2em] text-clay mb-6">— Contact</p>
+        <p className="text-xs uppercase tracking-[0.2em] text-clay mb-6">Contact</p>
         <h1 className="font-serif text-5xl md:text-7xl leading-[1.02] tracking-tight text-balance">
           Let's build something <span className="italic text-clay">worth shipping</span>.
         </h1>

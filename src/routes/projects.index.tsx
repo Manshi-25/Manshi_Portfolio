@@ -8,15 +8,15 @@ import { useSpotlight } from "@/hooks/use-spotlight";
 export const Route = createFileRoute("/projects/")({
   head: () => ({
     meta: [
-      { title: "Projects — Manshi Chauhan" },
-      { name: "description", content: "Projects and internships — full-stack apps and ML models." },
-      { property: "og:title", content: "Projects — Manshi Chauhan" },
+      { title: "Projects | Manshi Chauhan" },
+      { name: "description", content: "Projects and internships - full-stack apps and ML models." },
+      { property: "og:title", content: "Projects | Manshi Chauhan" },
       { property: "og:description", content: "Selected projects." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `https://manshi-chauhan.me/projects` },
       { property: "og:image", content: "https://manshi-chauhan.me/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Projects — Manshi Chauhan" },
+      { name: "twitter:title", content: "Projects | Manshi Chauhan" },
       { name: "twitter:description", content: "Selected projects." },
       { name: "twitter:image", content: "https://manshi-chauhan.me/og-image.png" },
     ],
@@ -31,7 +31,7 @@ function Projects() {
     <div className="mx-auto max-w-5xl px-5 sm:px-6 md:px-10 py-14 sm:py-20 md:py-32">
       <Reveal>
         <p className="text-xs uppercase tracking-[0.2em] text-clay mb-5 sm:mb-6">
-          — Selected Projects
+          Selected Projects
         </p>
         <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl leading-[1.02] tracking-tight text-balance">
           Things I've <span className="italic text-clay">built</span>.
